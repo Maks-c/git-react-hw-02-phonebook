@@ -1,12 +1,21 @@
 import React from 'react';
-
-const ContactListItem = ({name,number}) => {
+import PropTypes from 'prop-types'
+//==============================================
+import {SpanItem} from "./ContactsListItemStyle";
+const ContactListItem = ({name, number}) => {
     return (
-       <>
-           <span>{name}</span>
-           <span>{number}</span>
-       </>
+        <>
+            <SpanItem>{name}</SpanItem>
+            <SpanItem>{number}</SpanItem>
+        </>
     );
 };
+
+
+ContactListItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired
+
+}
 
 export default ContactListItem;

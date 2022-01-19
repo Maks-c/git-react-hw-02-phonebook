@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {nanoid} from "nanoid";
-// import {Formik,Form,Field,ErrorMessage} from "formik";
+
 
 class Form extends Component {
 
@@ -19,12 +19,12 @@ class Form extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.reset()
-        this.setState({name:'',number:''})
+        this.setState({name: '', number: ''})
         this.props.onSubmit({...this.state})
     }
 
-    reset=()=>{
-        this.setState({name:'',number:''})
+    reset = () => {
+        this.setState({name: '', number: ''})
     }
 
     render(){
@@ -32,9 +32,8 @@ class Form extends Component {
         const {name, number} = this.state
         return (
             <>
-                {/*<Formik><Form></Form></Formik>*/}
                 <form onSubmit={this.handleSubmit}>
-                    <label >
+                    <label>
                         Name
                         <input type='text'
                                name='name'
@@ -66,6 +65,6 @@ class Form extends Component {
         );
     }
 
-};
+}
 
 export default Form;

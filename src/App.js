@@ -3,9 +3,11 @@ import {nanoid} from "nanoid";
 import Form from "./Compounents/Form";
 import Contacts from "./Compounents/Contacts";
 import Filter from "./Compounents/Filter";
-
+//===========================================
+import {AppWrapper,MainHead} from "./AppStyle";
 
 class App extends Component {
+
     state = {
         contacts: [
             {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
@@ -51,13 +53,13 @@ class App extends Component {
         const searchContact = this.visibleContacts();
 
         return (
-            <div>
-                <h1>Phonebook</h1>
+            <AppWrapper>
+                <MainHead>Phonebook</MainHead>
                 <Form onSubmit={this.formSubmitHandler}/>
                 <h2>Contacts</h2>
                 <Contacts contacts={searchContact} onDelete={this.deleteContact}/>
                 <Filter value={filter} onChange={this.handleFilterChange}/>
-            </div>
+            </AppWrapper>
         )
     }
 
