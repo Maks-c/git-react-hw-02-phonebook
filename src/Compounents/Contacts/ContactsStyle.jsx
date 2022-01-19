@@ -2,8 +2,8 @@ import styled  from "styled-components";
 
 
 export  const List = styled.ul`
-    width: 300px;
-    margin: 0 auto 0 auto;
+    
+    margin: 0 auto 0 0;
     padding-left: 0;
  
 `
